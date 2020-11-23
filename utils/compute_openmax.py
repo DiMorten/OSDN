@@ -10,7 +10,7 @@ from utils.openmax_utils import compute_distance, getlabellist
 from utils.evt_fitting import weibull_tailfitting, query_weibull
 
 try:
-    import utils.libmr    # noqa: F401
+    import libmr    # noqa: F401
 except ImportError:
     print("LibMR not installed or libmr.so not found")
     print("Install libmr: cd libMR/; ./compile.sh")
