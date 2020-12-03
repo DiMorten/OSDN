@@ -164,8 +164,9 @@ def create_model(model, data):
         print("mean shape",mean.shape)
 
         distance = compute_distances(mean, fc8, sep_y)
-        print("distance shape",distance['eucos'].shape)
-
+        print("distance len",len(distance['eucos']))
+        print("distance sample",distance['eucos'][0))
+        
         feature_mean.append(mean)
         feature_distance.append(distance)
     np.save('data/mean', feature_mean)
