@@ -165,7 +165,7 @@ def create_model(model, data):
 
         distance = compute_distances(mean, fc8, sep_y)
         print("distance len",len(distance['eucos']))
-        print("distance sample",distance['eucos'][0])
+        #print("distance sample",distance['eucos'][0])
         
         feature_mean.append(mean)
         feature_distance.append(distance)
