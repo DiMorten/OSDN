@@ -159,8 +159,13 @@ def create_model(model, data):
         print(i, sep_x[i].shape)
         weibull_model[label[i]] = {}
         score, fc8 = compute_feature(sep_x[i], model)
+        print("fc8 shape",fc8.shape)
         mean = compute_mean_vector(fc8)
+        print("mean shape",mean.shape)
+
         distance = compute_distances(mean, fc8, sep_y)
+        print("distance shape",distance.shape)
+
         feature_mean.append(mean)
         feature_distance.append(distance)
     np.save('data/mean', feature_mean)
